@@ -13,8 +13,14 @@ Returns an array of "ticks", numbers that are suitable to use as tick mark value
 
 ## Usage
 
+Install via NPM:
+
+`npm install -S ticks`
+
+Example use:
+
 ```javascript
-var ticks = require("./index");
+var ticks = require("ticks");
 
 ticks(0.5432, 9.543, 10); //[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 ticks(1, 10000, 5); // [ 0, 2000, 4000, 6000, 8000, 10000 ]
