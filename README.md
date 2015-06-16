@@ -33,6 +33,8 @@ The algorithm for computing ticks is based on the idea of a "nice interval". Nic
 
 The Ticks algorithm computes the exponent of the raw interval, by `Math.log10((max - min) / n)`, then computes both the floor and ceiling of this value, which are candidate exponents for use in generating nice intervals. The algorithm then tries all 6 possible combinations of the two candidate exponents with the possible bases (1, 2, and 5) to generate a set of candidate nice intervals. From the generated set of nice intervals, the one that is closest to the raw interval (`(max - min) / n`) is chosen.
 
-I do realize that this replicates the functionality of [D3.scale.linear.ticks](https://github.com/mbostock/d3/wiki/Quantitative-Scales#linear_ticks). The main difference is that Ticks generates values that go beyond the original domain on both sides, whereas D3.scale.linear.ticks produces ticks that are contained within the domain. For computing a histogram, it is essential that the values go beyond the original domain.
+## Related Work
+
+I do realize that this replicates the functionality of [D3.scale.linear.ticks](https://github.com/mbostock/d3/wiki/Quantitative-Scales#linear_ticks). The main difference is that Ticks generates values that go beyond the original domain on both sides, whereas D3.scale.linear.ticks produces ticks that are contained within the domain. For computing a histogram, it is essential that the values go beyond the original domain. The main reason I created this library is for generating histograms with nice intervals (and also as a challenge to figure out the algorithm!).
 
 Curran Kelleher June 2015
