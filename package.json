@@ -1,0 +1,23 @@
+{
+  "name": "ticks",
+  "version": "0.0.1",
+  "description": "A utility for choosing nice tick marks or histogram intervals.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/curran/ticks.git"
+  },
+  "keywords": [
+    "visualization",
+    "histogram"
+  ],
+  "author": "Curran Kelleher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/curran/ticks/issues"
+  },
+  "homepage": "https://github.com/curran/ticks"
+}
