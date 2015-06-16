@@ -29,7 +29,7 @@ ticks(1000, 1002, 10); //[1000,1000.2,1000.4,1000.6,1000.8,1001,1001.2,1001.4,10
 ```
 
 ## Algorithm
-The algorithm for computing ticks is based on the idea of a "nice interval". Nice intervals can be expressed as `(base * 10^exp)`, where `exp` is some integer exponent, and `base` is either 1, 2, or 5. Examples of nice intervalsare 0.1, 0.5, 10, 20, 5, 2, 500.
+The algorithm for computing ticks is based on the idea of a "nice interval". Nice intervals can be expressed as `(base * 10^exp)`, where `exp` is some integer exponent, and `base` is either 1, 2, or 5. Examples of nice intervals are 0.1, 0.5, 10, 20, 5, 2, and 500.
 
 The Ticks algorithm computes the exponent of the raw interval, by `Math.log10((max - min) / n)`, then computes both the floor and ceiling of this value, which are candidate exponents for use in generating nice intervals. The algorithm then tries all 6 possible combinations of the two candidate exponents with the possible bases (1, 2, and 5) to generate a set of candidate nice intervals. From the generated set of nice intervals, the one that is closest to the raw interval (`(max - min) / n`) is chosen.
 
