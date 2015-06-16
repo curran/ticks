@@ -35,12 +35,14 @@ The Ticks algorithm computes the exponent of the raw interval, by `Math.log10((m
 
 ## Related Work
 
-A similar algorithm for doing this appeared in ["Nice Numbers for Graph Labels" by Paul S. Heckbert in the book "Graphics Gems"](https://books.google.com/books?id=Mqn8BAAAQBAJ&pg=PA61&lpg=PA61&dq=heckbert+nice+numbers+axis+graphics+gems&source=bl&ots=FtY2gnkRov&sig=o4053FRSlSxhaPbF0BPIwU3VZlI&hl=en&sa=X&ved=0CDkQ6AEwCWoVChMI4O2nn4mTxgIVFhiSCh3S2ACz#v=onepage&q=heckbert%20nice%20numbers%20axis%20graphics%20gems&f=false), originally [published in 1990](http://dl.acm.org/citation.cfm?id=90783).
+The seminal approach for generating tick marks appeared in ["Nice Numbers for Graph Labels" by Paul S. Heckbert in the book "Graphics Gems"](https://books.google.com/books?id=Mqn8BAAAQBAJ&pg=PA61&lpg=PA61&dq=heckbert+nice+numbers+axis+graphics+gems&source=bl&ots=FtY2gnkRov&sig=o4053FRSlSxhaPbF0BPIwU3VZlI&hl=en&sa=X&ved=0CDkQ6AEwCWoVChMI4O2nn4mTxgIVFhiSCh3S2ACz#v=onepage&q=heckbert%20nice%20numbers%20axis%20graphics%20gems&f=false), originally [published in 1990](http://dl.acm.org/citation.cfm?id=90783).
 
-Also, a similar algorithm is implemented in [D3.scale.linear.ticks](https://github.com/mbostock/d3/wiki/Quantitative-Scales#linear_ticks). The main difference is that Ticks generates values that go beyond the original domain on both sides, whereas D3.scale.linear.ticks produces ticks that are contained within the domain. For computing a histogram, it is essential that the values go beyond the original domain. The main reason I created this library is for generating histograms with nice intervals (and also as a challenge to figure out the algorithm!).
+Subsequently, there have been a variety of new takes on the problem. This research paper presents an approach for this that takes more factors into account, including the actual size of label text: [An Extension of Wilkinson’s Algorithm for Positioning Tick Labels on Axes, by Justin Talbot, Sharon Lin, and Pat Hanrahan](http://graphics.stanford.edu/vis/publications/2010/labeling-preprint.pdf), and also surveys other algorithms.
+
+Also, a similar algorithm is implemented in [D3.scale.linear.ticks](https://github.com/mbostock/d3/wiki/Quantitative-Scales#linear_ticks).
 
 ## Future Goals
 
-The Graphics Gems chapter "Nice Numbers for Graph Labels" by Paul S. Heckbert details "loose" and "tight" tick marks. Currently this library only provides "loose" ticks, but could be easily modified to generate "tight" ticks.
+The Graphics Gems chapter "Nice Numbers for Graph Labels" by Paul S. Heckbert details "loose" and "tight" tick marks. Currently this library only provides "loose" ticks, but could be easily modified to generate "tight" ticks. It could also be extended to account for actual text label size.
 
 Curran Kelleher June 2015
