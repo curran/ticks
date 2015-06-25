@@ -1,6 +1,6 @@
 var bases = [1, 2, 5];
 
-function ticks(min, max, n){
+function ticks(min, max, n, tight){
 
   // Swap min and max if necessary;
   if(min > max){
@@ -18,7 +18,14 @@ function ticks(min, max, n){
     ticks.push(value);
   }
 
-  return ticks.map(precision(interval));
+  ticks = ticks.map(precision(interval));
+
+  if(tight){
+    ticks[0] = min;
+    ticks[ticks.length - 1] = max;
+  }
+
+  return ticks;
 }
 
 // This eliminates floating point errors otherwise accumulated

@@ -28,6 +28,13 @@ ticks(-1, 1, 10); // [-1,-0.8,-0.6,-0.4,-0.2,0,0.2,0.4,0.6,0.8,1]
 ticks(1000, 1002, 10); //[1000,1000.2,1000.4,1000.6,1000.8,1001,1001.2,1001.4,1001.6,1001.8,1002]
 ```
 
+## API
+<a name="ticks" href="#ticks">#</a> <b>ticks</b>(<i>min, max, numTicks [,tight]</i>)
+
+Computes and returns approximately `numTicks` ticks spaced nicely that include the intervaj [min, max].
+
+If `tight` is specified, then the first tick is the min, and the last tick is the max. The The Graphics Gems chapter "Nice Numbers for Graph Labels" by Paul S. Heckbert introduces the notion of "loose" and "tight" tick marks.
+
 ## Algorithm
 The algorithm for computing ticks is based on the idea of a "nice interval". Nice intervals can be expressed as `(base * 10^exp)`, where `exp` is some integer exponent, and `base` is either 1, 2, or 5. Examples of nice intervals are 0.1, 0.5, 10, 20, 5, 2, and 500.
 
@@ -41,9 +48,6 @@ Subsequently, there have been a variety of new takes on the problem. This resear
 
 Also, a similar algorithm is implemented in [D3.scale.linear.ticks](https://github.com/mbostock/d3/wiki/Quantitative-Scales#linear_ticks).
 
-## Future Goals
-
-The Graphics Gems chapter "Nice Numbers for Graph Labels" by Paul S. Heckbert details "loose" and "tight" tick marks. Currently this library only provides "loose" ticks, but could be easily modified to generate "tight" ticks. It could also be extended to account for actual text label size.
 
 ## Development Tooling
 

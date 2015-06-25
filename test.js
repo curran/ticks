@@ -53,4 +53,11 @@ describe("Ticks", function(){
       [1000,1000.2,1000.4,1000.6,1000.8,1001,1001.2,1001.4,1001.6,1001.8,1002]
     );
   });
+
+  it("should compute tight ticks", function(){
+    assert.deepEqual(
+      ticks(0.5432, 10.3, 10, true),
+      [ 0.5432, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10.3 ]
+    );
+  });
 })
