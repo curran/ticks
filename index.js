@@ -2,6 +2,7 @@ var bases = [1, 2, 5];
 
 function ticks(min, max, n){
 
+  // Swap min and max if necessary;
   if(min > max){
     var temp = min;
     min = max;
@@ -66,4 +67,4 @@ function getFirstTickValue(min, interval){
 ticks.getNiceInterval = getNiceInterval;
 ticks.getFirstTickValue = getFirstTickValue;
 
-module.exports = ticks;
+export default ticks;

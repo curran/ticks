@@ -1,5 +1,5 @@
 var assert = require("assert");
-var ticks = require("./index");
+var ticks = require("./ticks");
 
 describe("Ticks", function(){
   it("should compute nice interval", function(){

@@ -2,9 +2,12 @@
   "name": "ticks",
   "version": "0.0.1",
   "description": "A utility for choosing nice tick marks or histogram intervals.",
-  "main": "index.js",
+  "main": "ticks.js",
+  "jsnext:main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "pretest": "rollup --format=cjs --output ticks.js index.js",
+    "test": "mocha",
+    "prepublish": "npm run test"
   },
   "repository": {
     "type": "git",
