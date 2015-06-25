@@ -1,6 +1,6 @@
 {
   "name": "ticks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A utility for choosing nice tick marks or histogram intervals.",
   "main": "ticks.js",
   "jsnext:main": "index.js",
