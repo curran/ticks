@@ -31,7 +31,7 @@ ticks(1000, 1002, 10); //[1000,1000.2,1000.4,1000.6,1000.8,1001,1001.2,1001.4,10
 ## API
 <a name="ticks" href="#ticks">#</a> <b>ticks</b>(<i>min, max, numTicks [,tight]</i>)
 
-Computes and returns approximately `numTicks` ticks spaced nicely that include the intervaj [min, max].
+Computes and returns approximately `numTicks` ticks spaced nicely that include the given interval.
 
 If `tight` is specified, then the first tick is the min, and the last tick is the max. The The Graphics Gems chapter "Nice Numbers for Graph Labels" by Paul S. Heckbert introduces the notion of "loose" and "tight" tick marks.
 
