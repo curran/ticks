@@ -47,10 +47,12 @@ The Graphics Gems chapter "Nice Numbers for Graph Labels" by Paul S. Heckbert de
 
 ## Development Tooling
 
-This module is published as an NPM package. The module itself is authored using ES6 module syntax in `index.js`, which is declared as the `jsnext:main` entry point in `package.json` so it can be included in Rollup-based builds. The module is converted to CommonJS format in the `prepublish` script, which runs the `pretest` and `test` scripts`, making the built file `ticks.js` available in the NPM package. The built file is excluded from the Git repository via the `.gitignore` file. Usually NPM ignores files in `.gitignore`, so to cause NPM to include `ticks.js`, an [empty `.npmignore` file was added.
+This module is published as an NPM package. The module itself is authored using ES6 module syntax in `index.js`, which is declared as the `jsnext:main` entry point in `package.json` so it can be included in [Rollup](https://github.com/rollup/rollup)-based builds. The module is converted to CommonJS format in the `prepublish` script, which runs the `pretest` and `test` scripts`, making the built file `ticks.js` available in the NPM package. The built file is excluded from the Git repository via the `.gitignore` file. Usually NPM ignores files in `.gitignore`, so to cause NPM to include `ticks.js`, an [empty `.npmignore` file was added.
 
 Here's what it looks like when `npm publish` is run:
 
 ![](http://curran.github.io/images/ticks/publishFlow.png)
+
+During development you can run `npm test` to run the Rollup build and run the unit tests.
 
 <small>Curran Kelleher June 2015</small>
