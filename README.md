@@ -45,4 +45,12 @@ Also, a similar algorithm is implemented in [D3.scale.linear.ticks](https://gith
 
 The Graphics Gems chapter "Nice Numbers for Graph Labels" by Paul S. Heckbert details "loose" and "tight" tick marks. Currently this library only provides "loose" ticks, but could be easily modified to generate "tight" ticks. It could also be extended to account for actual text label size.
 
-Curran Kelleher June 2015
+## Development Tooling
+
+This module is published as an NPM package. The module itself is authored using ES6 module syntax in `index.js`, which is declared as the `jsnext:main` entry point in `package.json` so it can be included in Rollup-based builds. The module is converted to CommonJS format in the `prepublish` script, which runs the `pretest` and `test` scripts`, making the built file `ticks.js` available in the NPM package. The built file is excluded from the Git repository via the `.gitignore` file. Usually NPM ignores files in `.gitignore`, so to cause NPM to include `ticks.js`, an [empty `.npmignore` file was added.
+
+Here's what it looks like when `npm publish` is run:
+
+![](http://curran.github.io/images/ticks/publishFlow.png)
+
+<small>Curran Kelleher June 2015</small>
