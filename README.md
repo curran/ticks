@@ -1,6 +1,18 @@
 # Ticks
 A utility for choosing nice tick marks or histogram intervals.
 
+![](http://curran.github.io/images/ticks/deprecated.png)
+This project is just an experiment. Use [d3-scale](https://github.com/d3/d3-scale) if you need nice tick intervals, like this:
+
+```
+var ticks = d3.scale.linear()
+  .domain(extent(data, accessor))
+  .nice(count)
+  .ticks(count);
+```
+
+In the above code, `count` is the approximate number of desired ticks.
+
 ## API
 
 `ticks(min, max, n)`
