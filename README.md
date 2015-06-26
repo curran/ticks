@@ -2,7 +2,7 @@
 A utility for choosing nice tick marks or histogram intervals.
 
 ![](http://curran.github.io/images/ticks/deprecated.png)
-This project is just an experiment. Use [d3-scale](https://github.com/d3/d3-scale) if you need nice tick intervals, like this:
+This project is just an experiment. Use [d3-scale](https://github.com/d3/d3-scale#linear_ticks) if you need nice tick intervals, like this:
 
 ```javascript
 var ticks = d3.scale.linear()
